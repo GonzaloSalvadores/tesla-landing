@@ -4,7 +4,7 @@ import Logo from "./logo.astro";
 <header 
     id="landing-header"
     class="py-4 px-10 flex items-center fixed top-0 w-full justify-between z-40  text-white" 
-    style="color: black;"> 
+    style="color: white;"> 
     
     <div class="flex flex-grow basis-0">
         <Logo />
@@ -39,27 +39,25 @@ import Logo from "./logo.astro";
     ease-in-out
 
     `}
-    ></div>
+    >
+    </div>
 
 </header>
 
 <script>
     const listItem = document.querySelectorAll("#landing-header li")
     const menu = document.querySelector("#menu-backdrop")
-
-    
-    
 </script>
 
 <script>
-    const header = document.querySelector('#landing-header')
+    const header = document.querySelector('#landing-header');
 
 
     const observerOptions = {
         root: null,
         rootMargin: '0px', // en cuanto se vea el elemento
         threshold: 0.90 //porcentaje de visibilidad
-    }
+    };
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach((entry) => {
@@ -69,10 +67,10 @@ import Logo from "./logo.astro";
                 header.style.color = color
             }
         })
-    }, observerOptions)
+    }, observerOptions);
 
-    const sections = document.querySelectorAll('.landing-section')
+    const sections = document.querySelectorAll('.landing-section');
 
-    sections.forEach((section) => observer.observe(section))
+    sections.forEach((section) => observer.observe(section));
 
 </script>
