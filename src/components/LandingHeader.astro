@@ -45,6 +45,7 @@ import Logo from "./logo.astro";
 <script>
     const listItem = document.querySelectorAll("#landing-header li")
     const menu = document.querySelector("#menu-backdrop")
+    console.log('este es el cambio ');
 </script>
 
 <script>
@@ -61,8 +62,8 @@ import Logo from "./logo.astro";
         entries.forEach((entry) => {
             const isIntersecting = entry
             if(isIntersecting) {
-                const color = entry.target.getAttribute('data-header-color')
-                header.style.color = color
+                const color = entry.target.getAttribute('data-header-color');
+                header.style.color = color;
             }
         })
     }, observerOptions);
